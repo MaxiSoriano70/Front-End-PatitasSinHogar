@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adopción de mascotas" />
+    <meta name="author" content="Maximiliano Soriano" />
+    <meta name="keywords" content="Adopción de mascotas, Adopción de Perros, Adopción de Gatos, Adopción de Caninos, Adopción de Felinos" />
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fuente Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/nuestrasMarcas.css">
+    <link rel="stylesheet" href="../css/publicidadClinica.css">
+    <link rel="stylesheet" href="../css/desarrolladores.css">
+    <link rel="stylesheet" href="../css/publicidadPeluqueria.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/bootstrap-personalizado.css">
+    <script src="../js/login.js"></script>
+    <title>Patitas sin hogar</title>
+</head>
+<body class="container-fluid p-0">
+    <!-- Header -->
+    <header>
+        <section class="contenedor">
+            <article class="logo">
+                <a href="../index.html" aria-label="Logo y nombre">
+                    <img src="../img/Logo.png" alt="Logo PetShop">
+                    <p>Patitas sin hogar</p>
+                </a>
+            </article>
+            <nav class="menu">
+                <article class="head">
+                    <div class="logo">
+                        <a href="../index.html" aria-label="Logo y nombre">
+                            <img src="../img/Logo.png" alt="Logo PetShop">
+                            <p>Patitas sin hogar</p>
+                        </a>
+                    </div>
+                    <button type="button" class="close-menu-btn" aria-label="Cerrar menu"><i class="fa-regular fa-circle-xmark"></i></button>
+                </article>
+                <ul>
+                    <li>
+                        <a href="../index.html" aria-label="Home"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-label="Vacunas" onclick="event.preventDefault()"><i class="fa-solid fa-paw"></i> Mascotas</a>
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#" aria-label="Caninos"><span><i class="fa-solid fa-house-circle-check"></i> Adoptadas</span></a></li>
+                            <li><a href="#" aria-label="Felinos"><span><i class="fa-solid fa-magnifying-glass"></i> Perdidas</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./tips.html" aria-label="Tips"><i class="fa-brands fa-gratipay"></i> Tips</a>
+                    </li>
+                    <li>
+                        <a href="./nosotros.html" aria-label="A cerca de nosotros"><i class="fa-solid fa-circle-info"></i> Nosotros</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" aria-label="Nombre usuario" onclick="event.preventDefault()"><i class="fa-solid fa-user"></i> Karen Dominguez</a>
+                        <i class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <!-- Button modal Editar Perfil-->
+                            <li><a href="#" aria-label="Datos Personales" data-bs-toggle="modal" data-bs-target="#editarPerfilModal"><span><i class="fa-solid fa-user-pen"></i> Datos Personales</span></a></li>
+                            <li><a href="./misMascotas.html" aria-label="Mis mascotas"><span><i class="fa-solid fa-paw"></i> Mis mascotas</span></a></li>
+                            <li><a href="#" aria-label="Cerrar Sesión" onclick="cerrarSesion()"><span><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <article class="header-rigth">
+                <!-- Button modal Iniciar Sesión-->
+                <button type="button" class="login-btn" aria-label="Iniciar Sesión" data-bs-toggle="modal" data-bs-target="#iniciarSesionModal"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</button>
+                <button type="button" class="open-menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+            </article>
+        </section>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Nuestras marcas-->
+        <section class="nuestras-marcas">
+            <article class="marca-titulo">
+                <h3>Nuestras sponsors</h3>
+            </article>
+            <article class="marcas">
+                <div class="contenedor-logo" data-aos="flip-up">
+                    <img class="logo-royal-canin" src="../img/marca-1.png" alt="royal-canin">
+                </div>
+                <div class="contenedor-logo" data-aos="flip-up">
+                    <img class="logo-purina" src="../img/marca-2.png" alt="purina">
+                </div>
+                <div class="contenedor-logo" data-aos="flip-up">
+                    <img class="logo-nexgard" src="../img/marca-3.png" alt="nexgard">
+                </div>
+                <div class="contenedor-logo" data-aos="flip-up">
+                    <img class="logo-bravexto" src="../img/marca-4.png" alt="bravexto">
+                </div>
+                <div class="contenedor-logo" data-aos="flip-up">
+                    <img class="logo-purina-pro-plan" src="../img/marca-5.png" alt="purina-pro-plan">
+                </div>
+                <div class="contenedor-logo" data-aos="flip-up">
+                    <img class="logo-whiskas" src="../img/marca-6.png" alt="whiskas">
+                </div>
+            </article>
+        </section>
+
+        <!-- Publicidad clinica-->
+        <section class="clinica">
+            <a class="link-clinica" href="#" target="_blank" data-aos="flip-up" aria-label="Clinica Veterinaria">
+                <img class="img-clinica-1" src="../img/clinica-1.jpg" alt="clinica-veterinaria-1">
+                <img class="img-clinica-2" src="../img/clinica-2.jpg" alt="clinica-veterinaria-2">
+            </a>
+        </section>
+
+        <!-- Nosotros-->
+
+        <!-- Desarrollares-->
+        <section class="desarrolladores">
+            <article class="desarrolladores-titulo">
+                <h3>Desarrolladores</h3>
+            </article>
+            <article class="contenedor-desarrolladores">
+                <div class="card" data-aos="zoom-in">
+                    <div class="contenido">
+                        <span></span>
+                        <div class="img-desarrollador">
+                            <img src="../img/Pingu.jpg" alt="desarrolador">
+                        </div>
+                        <h4>Maximiliano Soriano</h4>
+                        <h5>Desarrollador Full Stack</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex exercitationem consectetur praesentium unde nihil suscipit asperiores ut, natus eligendi laboriosam eveniet impedit nisi culpa eos, libero fugiat error accusamus.</p>
+                    </div>
+                    <div class="links">
+                        <a href="#" target="_blank" aria-label="Linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Porfolio">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card" data-aos="zoom-in">
+                    <div class="contenido">
+                        <span></span>
+                        <div class="img-desarrollador">
+                            <img src="../img/Pingu.jpg" alt="desarrolador">
+                        </div>
+                        <h4>Maximiliano Soriano</h4>
+                        <h5>Desarrollador Full Stack</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex exercitationem consectetur praesentium unde nihil suscipit asperiores ut, natus eligendi laboriosam eveniet impedit nisi culpa eos, libero fugiat error accusamus.</p>
+                    </div>
+                    <div class="links">
+                        <a href="#" target="_blank" aria-label="Linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Porfolio">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="card" data-aos="zoom-in">
+                    <div class="contenido">
+                        <span></span>
+                        <div class="img-desarrollador">
+                            <img src="../img/Pingu.jpg" alt="desarrolador">
+                        </div>
+                        <h4>Maximiliano Soriano</h4>
+                        <h5>Desarrollador Full Stack</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex exercitationem consectetur praesentium unde nihil suscipit asperiores ut, natus eligendi laboriosam eveniet impedit nisi culpa eos, libero fugiat error accusamus.</p>
+                    </div>
+                    <div class="links">
+                        <a href="#" target="_blank" aria-label="Linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#" target="_blank" aria-label="Porfolio">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Publicidad peluqueria-->
+        <section class="peluqueria">
+            <a class="link-peluqueria" href="#" target="_blank" data-aos="flip-up" aria-label="Peluqueria de mascotas">
+                <img class="img-peluqueria-1" src="../img/peluqueria-1.jpg" alt="peluqueria-1">
+                <img class="img-peluqueria-2" src="../img/peluqueria-2.jpg" alt="peluqueria-2">
+            </a>
+        </section>
+
+        <!-- Modal Iniciar Sesión-->
+        <section class="modal fade" id="iniciarSesionModal" tabindex="-1" aria-labelledby="iniciarSesionModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-color-principal">
+                        <h5 class="modal-title text-white" id="iniciarSesionModal">Iniciar Sesión</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-color-fondo">
+                        <form class="form-iniciar-sesion">
+                            <div class="mb-3">
+                                <label for="email-iniciar-sesion" class="form-label fw-bolder">Email</label>
+                                <input type="email" class="form-control bg-input" id="email-iniciar-sesion" aria-describedby="emailHelp" placeholder="Ingrese su email"
+                                minlength="8" maxlength="20" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password-iniciar-sesion" class="form-label fw-bolder">Contraseña</label>
+                                <input type="password" class="form-control bg-input" id="password-iniciar-sesion"
+                                placeholder="Ingrese su contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres"
+                                maxlength="20" minlength="8" required>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <button type="submit" class="btn btn-personalized-2 mx-1 fw-bold" aria-label="Ingresar">Ingresar</button>
+                                <button type="reset" class="btn btn-personalized-1 mx-1 fw-bold" aria-label="Cancelar">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Registrarse-->
+        <section class="modal fade" id="registrarseModal" tabindex="-1" aria-labelledby="registrarseModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-color-principal">
+                        <h5 class="modal-title text-white" id="registrarseModal">Registarse</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-color-fondo">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bolder">Email</label>
+                                <input type="email" class="form-control bg-input" id="email" aria-describedby="emailHelp" placeholder="Ingrese su email"
+                                minlength="8" maxlength="20" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label fw-bolder">Nombre y Apellido</label>
+                                <input type="text" class="form-control bg-input" id="nombre" placeholder="Ingrese su nombre y apellido"
+                                minlength="3" maxlength="25" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label fw-bolder">Teléfono</label>
+                                <input type="tel" class="form-control bg-input" id="telefono" placeholder="Ingresa tu teléfono" maxlength="10" pattern="\d{10}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fecha-nacimiento" class="form-label fw-bolder">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control bg-input" id="fecha-nacimiento" placeholder="Ingrese su Fecha de Nacimiento" min="1900-01-01" max="2004-12-31" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-bolder">Contraseña</label>
+                                <input type="password" class="form-control bg-input" id="password"
+                                placeholder="Ingrese su contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres"
+                                maxlength="20" minlength="8" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-bolder">Repetir contraseña</label>
+                                <input type="password" class="form-control bg-input" id="password"
+                                placeholder="Repita su contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres"
+                                maxlength="20" minlength="8" required>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <button type="submit" class="btn btn-personalized-2 mx-1 fw-bold" aria-label="Registrarse">Registrarse</button>
+                                <button type="reset" class="btn btn-personalized-1 mx-1 fw-bold" aria-label="Cancelar">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Editar Perfil-->
+        <section class="modal fade" id="editarPerfilModal" tabindex="-1" aria-labelledby="editarPerfilModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-color-principal">
+                        <h5 class="modal-title text-white" id="editarPerfilModal">Editar Perfil</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-color-fondo">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label fw-bolder">Nombre y Apellido</label>
+                                <input type="text" class="form-control bg-input" id="nombre" placeholder="Ingrese su nombre y apellido"
+                                minlength="3" maxlength="25" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label fw-bolder">Teléfono</label>
+                                <input type="tel" class="form-control bg-input" id="telefono" placeholder="Ingresa tu teléfono" maxlength="10" pattern="\d{10}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fecha-nacimiento" class="form-label fw-bolder">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control bg-input" id="fecha-nacimiento" placeholder="Ingrese su Fecha de Nacimiento" min="1900-01-01" max="2004-12-31" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-bolder">Contraseña</label>
+                                <input type="password" class="form-control bg-input" id="password"
+                                placeholder="Ingrese su contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres"
+                                maxlength="20" minlength="8" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-bolder">Repetir contraseña</label>
+                                <input type="password" class="form-control bg-input" id="password"
+                                placeholder="Repita su contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Debe contener al menos un número , una letra mayúscula una minúscula, y al menos 8 caracteres"
+                                maxlength="20" minlength="8" required>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <button type="submit" class="btn btn-personalized-2 mx-1 fw-bold" aria-label="Guardar Cambios">Guardar Cambios</button>
+                                <button type="button" class="btn btn-personalized-1 mx-1 fw-bold" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer data-aos="fade-up">
+        <section class="section-1">
+            <article class="box-logo">
+                <a href="../index.html" aria-label="Logo y nombre">
+                    <img src="../img/Logo.png" alt="Logo-pie-de-pagina">
+                    <p>Patitas sin hogar</p>
+                </a>
+            </article>
+            <article class="box-nosotros">
+                <h3>Sobre nosotros</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, impedit, et corrupti dolore, voluptate labore illo quaerat voluptatum obcaecati ipsum cum quasi eveniet. Accusantium est quo pariatur optio dolor minus.</p>
+            </article>
+            <article class="box-redes">
+                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" aria-label="Instragram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </article>
+        </section>
+        <section class="section-2">
+            <small>
+                &copy; 2024 <b>Maximiliano Soriano</b> - Todos los derechos reservados.
+            </small>
+        </section>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Sweetalert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Script -->
+    <script src="../js/header.js"></script>
+    <script src="../js/alertas.js"></script>
+</body>
+</html>

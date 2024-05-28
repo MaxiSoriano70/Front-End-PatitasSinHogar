@@ -1,0 +1,136 @@
+:root {
+    --color-1: #2c6d54;
+    --color-2: #377756;
+    --color-3: #1b4565;
+    --color-4: #1e4a6c;
+    --color-5: #445574;
+    --color-6: #4a5b78;
+    --color-7:#bc1442;
+    --color-8:#ce1d49;
+    --color-fondo: #dcefe4;
+    --color-complementario-I : #a50f0f;
+    --color-complementario-II : #c80d0d;
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-blanco: #fff;
+    --color-negro: #000;
+}
+
+.mascotas-en-adopcion{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mascotas-en-adopcion .adopcion-titulo{
+    margin-bottom: 10px;
+}
+
+.mascotas-en-adopcion .adopcion-titulo h3{
+    text-transform: uppercase;
+}
+
+.mascotas-cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+}
+
+.card-mascota-adopcion{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 3;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+    margin: 15px;
+}
+
+.card-mascota-adopcion:hover .card-data-mascota {
+    transition: 0.5s;
+    bottom: 0;
+}
+
+.card-img{
+    width: 300px;
+    height: 230px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.card-data-mascota{
+    position: absolute;
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    bottom: -125px;
+    z-index: 2;
+}
+
+.card-data-mascota .data-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-data-mascota .data-head .titulo-nombre-mascota{
+    padding: 0;
+    margin: 0;
+}
+
+.card-data-mascota .data-body{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.data-body .descripcion-mascota{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.data-body .descripcion-mascota p{
+    margin: 0;
+}
+
+@media (max-width:640px){
+    .card-img{
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
+
+    .card-data-mascota{
+        height: 130px;
+        bottom: -130px;
+    }
+
+
+    .data-body h4{
+        font-size: 1.2rem;
+    }
+
+    .data-body p{
+        font-size: 0.8rem;
+    }
+}

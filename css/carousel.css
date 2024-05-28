@@ -1,0 +1,157 @@
+:root {
+    --color-1: #2c6d54;
+    --color-2: #377756;
+    --color-3: #1b4565;
+    --color-4: #1e4a6c;
+    --color-5: #445574;
+    --color-6: #4a5b78;
+    --color-7:#bc1442;
+    --color-8:#ce1d49;
+    --color-fondo: #dcefe4;
+    --color-complementario-I : #a50f0f;
+    --color-complementario-II : #c80d0d;
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-blanco: #fff;
+    --color-negro: #000;
+}
+
+
+.petCarousel{
+    height: 250px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    filter: brightness(0.6);
+}
+
+.container-img {
+    position: relative;
+}
+
+.text-carrusel {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 90%;
+    color: var(--color-blanco);
+}
+
+.text-carrusel .titulo-carrusel {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-p-slider-1 {
+    background-color: var(--color-1);
+    color: var(--color-blanco);
+    padding: 7px;
+    margin-top: 2.5px;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.btn-p-slider-1:hover {
+    background-color: var(--color-2);
+    color: var(--color-blanco);
+}
+
+.btn-p-slider-2 {
+    background-color: var(--color-7);
+    color: var(--color-blanco);
+    padding: 7px;
+    margin-top: 2.5px;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.btn-p-slider-2:hover {
+    background-color: var(--color-8);
+    color: var(--color-blanco);
+}
+
+.btn-p-slider-3 {
+    background-color: var(--color-3);
+    color: var(--color-blanco);
+    padding: 7px;
+    margin-top: 2.5px;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.btn-p-slider-3:hover {
+    background-color: var(--color-4);
+    color: var(--color-blanco);
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .petCarousel{
+        height: 450px;
+    }
+
+    .text-carrusel {
+        width: 80%;
+    }
+
+    .text-carrusel .titulo-carrusel {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .btn-p-slider-1 {
+        font-size: 1rem;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    .btn-p-slider-2 {
+        font-size: 1rem;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    .btn-p-slider-3 {
+        font-size: 1rem;
+        padding: 10px;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .petCarousel{
+        height: 600px;
+    }
+
+    .text-carrusel {
+        width: 70%;
+    }
+
+    .text-carrusel .titulo-carrusel {
+        font-size: 2.6rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .btn-p-slider-1 {
+        font-size: 1.5rem;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    .btn-p-slider-2 {
+        font-size: 1.5rem;
+        padding: 10px;
+        margin-top: 5px;
+    }
+
+    .btn-p-slider-3 {
+        font-size: 1.5rem;
+        padding: 10px;
+        margin-top: 5px;
+    }
+}
